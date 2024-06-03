@@ -1,0 +1,8 @@
+{
+    "cache_dir": "pretrain/cache",
+    "tokenizer_dir": "checkpoints/opt",
+    "train_file": "pretrain/raw/instructions.txt",
+    "preprocessing_num_workers": 8,
+    "output_dir": "pretrain/tokenized/instructions"
+}
+  

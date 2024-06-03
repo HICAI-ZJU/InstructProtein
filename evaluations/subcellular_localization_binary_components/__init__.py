@@ -1,1 +1,0 @@
-from .subcellular_localization_binary import SubcellularLocalizationBinaryDataModule

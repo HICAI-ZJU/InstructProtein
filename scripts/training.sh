@@ -1,0 +1,21 @@
+python training.py \
+          --cache_dir "checkpoints/opt/" \
+          --output_dir "pretrain/checkpoint" \
+          --train_file "pretrain/tokenized/instructions" \
+          --num_train_epochs 1 \
+          --per_device_train_batch_size 1 \
+          --gradient_accumulation_steps 16 \
+          --save_steps 1000 \
+          --save_total_limit 2 \
+          --prediction_loss_only \
+          --learning_rate 5e-5 \
+          --weight_decay 0.1 \
+          --adam_beta1 0.9 \
+          --adam_beta2 0.95 \
+          --max_grad_norm 1.0 \
+          --lr_scheduler_type "cosine" \
+          --warmup_steps 5000 \
+          --logging_steps 100 \
+          --fp16 \
+          --report_to wandb \
+          --deepspeed ds_config.json

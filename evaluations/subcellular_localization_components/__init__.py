@@ -1,1 +1,0 @@
-from .subcellular_localization import SubcellularLocalizationDataModule
