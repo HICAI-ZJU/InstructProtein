@@ -1,1 +1,1 @@
-root_dir = '/path/to/dump/'
+dump_dir = '/path/to/dump/'
