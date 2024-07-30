@@ -55,7 +55,6 @@ class SubcellularLocalizationDataModule():
         sequences, labels = zip(*raw_batch)
         if self.preprocess is not None:
             sequences = self.preprocess(sequences)
-
         return sequences, torch.tensor(labels)
         
     def dataloader(self, data_name):

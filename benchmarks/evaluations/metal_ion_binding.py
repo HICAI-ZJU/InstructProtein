@@ -26,7 +26,6 @@ class MetalIonBinding(object):
             encoded_input = self.tokenizer.encode(instruction.format(sequence[0]), return_tensors="pt").to(self.device)
             with torch.no_grad():
                 logits = F.log_softmax(self.model(encoded_input).logits, dim=-1)
-
             logits = logits[0][-1]
             logits = torch.gather(logits, 0, torch.tensor([token[0] for token in encoded_label], dtype=torch.long, device=self.device))
             result.append((torch.argmax(logits).item() == label[0].item(), torch.argmax(logits).item(), label, logits))

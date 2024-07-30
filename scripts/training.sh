@@ -1,10 +1,10 @@
 python training.py \
-          --cache_dir "checkpoints/opt/" \
+          --cache_dir "checkpoints/instructprotein/" \
           --output_dir "pretrain/checkpoint" \
           --train_file "pretrain/tokenized/instructions" \
           --num_train_epochs 1 \
           --per_device_train_batch_size 1 \
-          --gradient_accumulation_steps 16 \
+          --gradient_accumulation_steps 1 \
           --save_steps 1000 \
           --save_total_limit 2 \
           --prediction_loss_only \

@@ -15,8 +15,6 @@ from transformers.utils import send_example_telemetry
 
 from transformers import OPTForCausalLM, DataCollatorForLanguageModeling
 from transformers import AutoTokenizer
-# from models import PermForCausalLM
-# from data_utils import DataCollatorForPermLanguageModeling
 
 sys.path.append("..")
 from configuration import dump_dir
@@ -106,12 +104,9 @@ def main():
 
     set_seed(training_args.seed)
 
-    tokenizer = AutoTokenizer.from_pretrained("facebook/opt-1.3b", cache_dir=f'{dump_dir}/{model_args.cache_dir}', mask_token="<mask>")
-    additional_tokens =  ["<protein>", "</protein>", "ƤA", "ƤC", "ƤD", "ƤE", "ƤF", "ƤG", "ƤH", "ƤI", "ƤK", "ƤL", "ƤM", "ƤN", "ƤP", "ƤQ", "ƤR", "ƤS", "ƤT", "ƤV", "ƤW", "ƤY"]
-    tokenizer.add_tokens(additional_tokens)
+    tokenizer = AutoTokenizer.from_pretrained("hicai-zju/InstructProtein", cache_dir=f'{dump_dir}/{model_args.cache_dir}', mask_token="<mask>")
 
-    model = OPTForCausalLM.from_pretrained("facebook/opt-1.3b", cache_dir=f'{dump_dir}/{model_args.cache_dir}')
-    model.resize_token_embeddings(50304)
+    model = OPTForCausalLM.from_pretrained("hicai-zju/InstructProtein", cache_dir=f'{dump_dir}/{model_args.cache_dir}')
 
     tokenized_datasets = load_from_disk(f'{dump_dir}/{data_args.train_file}')
     train_dataset = tokenized_datasets["train"]

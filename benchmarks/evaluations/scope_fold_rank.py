@@ -35,11 +35,11 @@ class ScopeFoldRank(object):
                     'input_ids': inp['input_ids'][..., :-1],
                     'attention_mask': inp['attention_mask'][..., :-1]
                 }
+                import ipdb; ipdb.set_trace()
                 with torch.no_grad():
                     logits = F.log_softmax(self.model(inp['input_ids']).logits, dim=-1)
                 logits = logits[0][-len(sequence_enc):]
                 logits = torch.gather(logits, 1, torch.tensor([sequence_enc], dtype=torch.long, device=self.device)[0, :, None])
-
 
                 mean_logits = logits.mean()
                 template.append((float(mean_logits), logits))

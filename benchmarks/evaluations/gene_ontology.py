@@ -10,7 +10,7 @@ from .gene_ontology_components import GeneOntologyDataModule
 
 
 class GeneOntology(object):
-    labels = ["yes", "yo"]
+    labels = ["yes", "no"]
 
     def __init__(self, dump_dir, model, tokenizer, device, preprocess=None) -> None:
         self.model = model.to(device).eval()

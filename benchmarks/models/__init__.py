@@ -1,1 +1,1 @@
-from .pretrained import opt, galactica
+from .pretrained import opt, galactica, instructprotein

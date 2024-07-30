@@ -59,10 +59,8 @@ def main():
         **dataset_args
     )
 
-    tokenizer = AutoTokenizer.from_pretrained("facebook/opt-1.3b", cache_dir=f'{dump_dir}/{data_args.tokenizer_dir}')
-    additional_tokens = ["<protein>", "</protein>", "ƤA", "ƤC", "ƤD", "ƤE", "ƤF", "ƤG", "ƤH", "ƤI", "ƤK", "ƤL", "ƤM", "ƤN", "ƤP", "ƤQ", "ƤR", "ƤS", "ƤT", "ƤV", "ƤW", "ƤY"]
-    tokenizer.add_tokens(additional_tokens)
-    
+    tokenizer = AutoTokenizer.from_pretrained("hicai-zju/InstructProtein", cache_dir=f'{dump_dir}/{data_args.tokenizer_dir}')
+
     column_names = list(raw_datasets['train'].features)
     text_column_name = 'text' if 'text' in column_names else column_names[0]
 
