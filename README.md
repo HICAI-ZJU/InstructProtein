@@ -36,20 +36,31 @@ We provide a toy instruction dataset in `./dump/pretrain/raw/instructions.txt`.
 
 ## Limitations
 
-The current model, developed through instruction tuning using knowledge instruction dataset, serves as a preliminary example. Despite its initial success in controlled environments, it lacks the robustness to manage complex, real-world, production-level tasks.
+The current model, developed through instruction tuning using the knowledge instruction dataset, serves as a preliminary example. Despite its initial success in controlled environments, it lacks the robustness to manage complex, real-world, production-level tasks.
 
 ## Reference
 
 If you use our repository, please cite the following related paper:
 
 ```
-@misc{wang2023instructproteinaligninghumanprotein,
-      title={Instruct{P}rotein: {A}ligning {H}uman and {P}rotein {L}anguage via {K}nowledge {I}nstruction}, 
-      author={Zeyuan Wang and Qiang Zhang and Keyan Ding and Ming Qin and Xiang Zhuang and Xiaotong Li and Huajun Chen},
-      year={2023},
-      eprint={2310.03269},
-      archivePrefix={arXiv},
-      primaryClass={q-bio.BM},
-      url={https://arxiv.org/abs/2310.03269}, 
+@inproceedings{wang-etal-2024-instructprotein,
+    title = "{I}nstruct{P}rotein: Aligning Human and Protein Language via Knowledge Instruction",
+    author = "Wang, Zeyuan  and
+      Zhang, Qiang  and
+      Ding, Keyan  and
+      Qin, Ming  and
+      Zhuang, Xiang  and
+      Li, Xiaotong  and
+      Chen, Huajun",
+    editor = "Ku, Lun-Wei  and
+      Martins, Andre  and
+      Srikumar, Vivek",
+    booktitle = "Proceedings of the 62nd Annual Meeting of the Association for Computational Linguistics (Volume 1: Long Papers)",
+    month = aug,
+    year = "2024",
+    address = "Bangkok, Thailand",
+    publisher = "Association for Computational Linguistics",
+    url = "https://aclanthology.org/2024.acl-long.62",
+    pages = "1114--1136",
 }
 ```
