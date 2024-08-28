@@ -1,5 +1,5 @@
 # InstructProtein: Aligning Human and Protein Language via Knowledge Instruction
-This repository is the official model and benchmark proposed in a paper: [InstructProtein: Aligning Human and Protein Language via Knowledge Instruction](https://arxiv.org/abs/2310.03269)
+This repository is the official model and benchmark proposed in a paper: [InstructProtein: Aligning Human and Protein Language via Knowledge Instruction](https://aclanthology.org/2024.acl-long.62/). The model is available at [HuggingFace](https://huggingface.co/hicai-zju/InstructProtein).
 
 ## Description
 
